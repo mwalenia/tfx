@@ -29,13 +29,7 @@ from google.protobuf import text_format
 from tensorflow.python.lib.io import file_io  # pylint: disable=g-direct-tensorflow-import
 from tensorflow_metadata.proto.v0 import statistics_pb2
 
-try:
-  # Absolute import is preferred after 0.13 release, in which the path below
-  # will be available in TFX package and will be a dependency of chicago taxi
-  # example.
-  from tfx.examples.chicago_taxi.trainer import taxi  # pylint: disable=g-import-not-at-top
-except ImportError:
-  from trainer import taxi  # pylint: disable=g-import-not-at-top
+from trainer import taxi 
 
 
 def infer_schema(stats_path, schema_path):
