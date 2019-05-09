@@ -31,7 +31,6 @@ from tensorflow_metadata.proto.v0 import statistics_pb2
 
 from trainer import taxi 
 
-
 def infer_schema(stats_path, schema_path):
   """Infers a schema from stats in stats_path.
 
