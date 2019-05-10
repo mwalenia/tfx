@@ -37,5 +37,6 @@ if __name__ == '__main__':
           'tensorflow-model-analysis==0.13.2',
           'tensorflow-serving-api==1.13.0',
           'tensorflow-transform==0.13.0',
+          'scikit-learn>=0.1,<=0.20'
       ],
       python_requires='>=2.7,<3')

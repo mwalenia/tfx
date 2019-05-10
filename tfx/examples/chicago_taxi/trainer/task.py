@@ -22,8 +22,8 @@ import os
 import tensorflow as tf
 import tensorflow_model_analysis as tfma
 import tensorflow_transform as tft
-from tfx.examples.chicago_taxi.trainer import model
-from tfx.examples.chicago_taxi.trainer import taxi
+from trainer import model  # pylint: disable=g-import-not-at-top
+from trainer import taxi  # pylint: disable=g-import-not-at-top
 
 SERVING_MODEL_DIR = 'serving_model_dir'
 EVAL_MODEL_DIR = 'eval_model_dir'
