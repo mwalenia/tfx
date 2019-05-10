@@ -15,28 +15,28 @@
 import setuptools
 
 # LINT.IfChange
-TF_VERSION = '1.12.0'
+TF_VERSION = '1.13.1'
 # LINT.ThenChange(train_mlengine.sh, start_model_server_mlengine.sh)
 
 # LINT.IfChange
-BEAM_VERSION = '2.11.0'
+BEAM_VERSION = '2.12.0'
 # LINT.ThenChange(setup_beam_on_flink.sh)
 
 if __name__ == '__main__':
-  setuptools.setup(
-      name='tfx_chicago_taxi',
-      version='0.12.0',
-      packages=setuptools.find_packages(),
-      install_requires=[
-          'apache-beam[gcp]==' + BEAM_VERSION,
-          'jupyter==1.0',
-          'numpy==1.14.5',
-          'protobuf==3.6.1',
-          'tensorflow==' + TF_VERSION,
-          'tensorflow-data-validation==0.12.0',
-          'tensorflow-metadata==0.12.1',
-          'tensorflow-model-analysis==0.12.1',
-          'tensorflow-serving-api==1.12.0',
-          'tensorflow-transform==0.12.0',
-      ],
-      python_requires='>=2.7,<3')
+    setuptools.setup(
+        name='tfx_chicago_taxi',
+        version='0.13.0',
+        packages=setuptools.find_packages(),
+        install_requires=[
+            'apache-beam[gcp]==' + BEAM_VERSION,
+            'jupyter==1.0',
+            'protobuf==3.7.1',
+            'tensorflow==' + TF_VERSION,
+            'tensorflow-data-validation==0.13.1',
+            'tensorflow-metadata==0.13.0',
+            'tensorflow-model-analysis==0.13.2',
+            'tensorflow-serving-api==1.13.0',
+            'tensorflow-transform==0.13.0',
+            'scikit-learn<=0.20'
+            ],
+        python_requires='>=2.7,<3')

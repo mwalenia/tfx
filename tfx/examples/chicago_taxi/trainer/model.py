@@ -19,7 +19,14 @@ from __future__ import print_function
 import tensorflow as tf
 
 import tensorflow_model_analysis as tfma
-from tfx.examples.chicago_taxi.trainer import taxi
+try:
+    # Absolute import is preferred after 0.13 release, in which the path below
+    # will be available in TFX package and will be a dependency of chicago taxi
+    # example.
+    from tfx.examples.chicago_taxi.trainer import taxi  # pylint: disable=g-import-not-at-top
+except ImportError:
+    from trainer import taxi  # pylint: disable=g-import-not-at-top
+
 
 
 def build_estimator(tf_transform_output, config, hidden_units=None):
